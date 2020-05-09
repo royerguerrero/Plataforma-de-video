@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+body {
+  margin: 0;
+  font-family: "Muli", sans-serif;
+  color: #FFFFFF;
+  overflow-x: hidden;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #7337EC;
+  padding-bottom: 20px;
+}
+
+.header--green {
+  background-color: #21C08B;
+}
+
+.header__img {
+  width: 200px;
+  margin: 10px 0 0 10px;
+}
+
+.header__menu:hover ul,
+ul:hover {
+  display: block;
+  width: 150px;
+}
+
+.header__menu {
+  margin-right: 30px;
+}
+
+.header__menu li {
+  margin: 10px 0px;
+}
+
+.header__menu a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.header__menu-items {
+  margin: 0px 5px;
+}
+
+.header__menu li a:hover {
+  text-decoration: underline;
+}
+
+.header__menu ul {
+  display: none;
+  list-style: none;
+  padding: 0px;
+  position: absolute;
+  width: 100px;
+  text-align: right;
+  margin: 0 0 0 -65px;
+}
+
+.header__menu--profile {
+  align-items: center;
+  margin-right: 8px;
+  display: flex;
+}
+
+.header__menu--profile img {
+  width: 32px;
+  height: 32px;
+  margin: 0px 15px 0 0;
+}
+
+.header__menu--profile p {
+  margin: 0px;
+  color: #FFFFFF;
+}
+
+.header__hide-menu ul {
+  display: block;
+}
+
+.main {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #7337EC;
+}
+
+.main__title {
+  color: #FFFFFF;
+  font-size: 25px;
+}
+
+.input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #FFFFFF;
+  border-radius: 50px;
+  color: #FFFFFF;
+  font-family: "Muli", sans-serif;
+  font-size: 16px;
+  height: 45px;
+  padding: 0 20px;
+  width: 70%;
+  outline: none;
+}
+
+::placeholder {
+  color: #FFFFFF;
+}
+
+.carousel {
+  background-color: #7337EC;
+  width: 100%;
+  overflow: scroll;
+  padding: 30px;
+  position: relative;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar:hover {
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar:hover:active {
+  background: #999;
+}
+
+.carousel__container {
+  margin: 30px 0px;
+  padding-bottom: 10px;
+}
+
+.carousel__container--title {
+  font-size: 1.3em;
+  padding: 0 0 0 10px;
+}
+
+.carousel-item {
+  background-color: paleturquoise;
+  width: 200px;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 10px;
+  display: inline-block;
+  cursor: pointer;
+  transition: 450ms all;
+  transform-origin: center left;
+  position: relative;
+}
+
+.carousel-item:hover ~ .carousel-item {
+  transform: translate3d(100px, 0, 0);
+}
+
+.carousel__container:hover ~ .carousel-item {
+  opacity: 0.3;
+}
+
+.carousel__container:hover .carousel-item:hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+.carousel-item__img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.carousel-item__details {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+  font-size: 10px;
+  opacity: 0;
+  transition: 450ms opacity;
+  padding: 10px;
+  position: absolute;
+  top: 130px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #FFFFFF;
+}
+
+.carousel-item:hover .carousel-item__details {
+  opacity: 1;
+}
+
+.carousel-item__details--icons img {
+  width: 20px;
+  margin: 0;
+}
+
+.card {
+  background: linear-gradient(#21C08B, #AB88FF);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 30px;
+  min-height: calc(100vh - 200px);
+}
+
+.card__container {
+  background: rgba(255, 255, 255, 0.1);
+  border: #FFFFFF solid 2px;
+  border-radius: 40px;
+  padding: 60px 60px 40px;
+  height: 80vh;
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  font-size: 14px;
+}
+
+.form__remember-me {
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.form__remember-me a {
+  color: #FFFFFF;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.form__remember-me a:hover {
+  text-decoration: underline;
+}
+
+.card__container--social-media div {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.card__container--social-media div img {
+  width: 30px;
+  padding-right: 10px;
+}
+
+.form__info {
+  text-align: center;
+}
+
+.form__info a {
+  font-size: 16px;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.form__info a:hover {
+  text-decoration: underline;
+}
+
+.form__input {
+  background: transparent;
+  border: 0px;
+  border-bottom: 2px solid #FFFFFF;
+  color: #FFFFFF;
+  font-family: "Muli", sans-serif;
+  outline: none;
+  margin-bottom: 20px;
+  padding: 5px 10px;
+  font-size: 16px;
+  height: 50px;
+}
+
+.button {
+  background: rgba(255, 255, 255, 0.2);
+  border: transparent;
+  border-radius: 25px;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding: 15px 5px;
+  text-align: center;
+  font-family: "Muli", sans-serif;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin: 15px 0px;
+  min-width: 90px;
+  margin: 0px 5px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background: #AB88FF;
+}
+
+.footer a {
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  padding-left: 30px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer--purple {
+  background-color: #7337EC;
+}
+
+.no-found {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(#21C08B, #AB88FF);
+  padding: 0px 30px;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+.no-found h2 {
+  transform: scale(1.5);
+  transition: 450ms;
+  font-size: 150px;
+  margin: 0;
+  animation-duration: 3s;
+  animation-name: zoom;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@media only screen and (max-width: 600px) {
+  .header__img {
+    width: 150px;
+  }
+
+  .card__container {
+    background: transparent;
+    border: none;
+    padding: 0px;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
